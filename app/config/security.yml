@@ -28,20 +28,7 @@ security:
             - { path: ^/resetting$,    role: IS_AUTHENTICATED_ANONYMOUSLY }
             
             - { path: ^/profile,       role: ROLE_USER }
-            
-            - { path: ^/post/new,      role: ROLE_USER }
-            - { path: ^/post/create,   role: ROLE_USER }
-            - { path: ^/post/move,     role: ROLE_USER }
-            - { path: ^/post/modify,   role: ROLE_USER }
-            - { path: ^/post/delete,   role: ROLE_USER }
-            
-            - { path: ^/group/new,          role: ROLE_USER }
-            - { path: ^/group/create,       role: ROLE_USER }
-            - { path: ^/group/modify,       role: ROLE_USER }
-            - { path: ^/group/delete,       role: ROLE_USER }
-            - { path: ^/group/subscribe,    role: ROLE_USER }
-            - { path: ^/group/unsubscribe,  role: ROLE_USER }
-            
+
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: ROLE_ADMIN

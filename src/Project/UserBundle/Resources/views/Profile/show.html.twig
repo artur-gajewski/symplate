@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    <h2 class="p3">
+        <span class="color-1">Your</span> profile
+    </h2>
+    {% include "ProjectUserBundle:Profile:show_content.html.twig" %}
+
+    <br/>
+
+    <h2 class="p3"><span class="color-1">Your</span> gravatar</h2>
+    <img src="{{ gravatar(user.email) }}"/>
+{% endblock content %}

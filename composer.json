@@ -1,19 +1,15 @@
 {
-    "name": "cobase/cobase",
-    "type": "symfony-application",
-    "description": "Open source alternative to Yammer and Moovia, corporate social media portal.",
-    "homepage": "https://github.com/CoBase/cobase",
-    "keywords": ["corporate","social","media"],
+    "name": "artur-gajewski/symplate",
+    "type": "template",
+    "description": "Symfony template spiced with responsive bootstrap layout.",
+    "homepage": "https://github.com/artur-gajewski/symplate",
+    "keywords": ["symfony2","bootstrap","template"],
     "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
         {
             "name": "Artur Gajewski",
             "homepage": "https://github.com/artur-gajewski"
-        },
-        {
-            "name": "Contributors",
-            "homepage": "https://github.com/CoBase/cobase/graphs/contributors"
         }
     ],
     "autoload": {
@@ -38,8 +34,6 @@
         "jms/di-extra-bundle": "1.4.*",
         "friendsofsymfony/user-bundle": "dev-master",
         "ornicar/gravatar-bundle": "dev-master",
-        "excelwebzone/recaptcha-bundle": "dev-master",
-        "liip/url-auto-converter-bundle": "1.0.*@dev",
         "xi/fixtures": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "~1.1",
         "antimattr/google-bundle": "dev-master",

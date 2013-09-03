@@ -16,7 +16,3 @@ _configurator:
 
 _main:
     resource: routing.yml
-
-CobaseDemoBundle:
-    resource: "@CobaseDemoBundle/Resources/config/routing.yml"
-    prefix:   /

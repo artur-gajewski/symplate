@@ -1,0 +1,34 @@
+services:
+    project_template.twig.extension:
+        class: Project\TemplateBundle\Twig\Extensions\CobaseAppExtension
+        tags:
+            - { name: twig.extension }
+
+    project_user.registration.form.type:
+        class: Project\TemplateBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%, @translator]
+        tags:
+            - { name: form.type, alias: cobase_user_registration }
+
+    project_user.profile.form.type:
+            class: Project\TemplateBundle\Form\Type\ProfileFormType
+            arguments: [%fos_user.model.user.class%]
+            tags:
+                - { name: form.type, alias: cobase_user_profile }
+
+    project_template.service.user:
+                class:     Project\TemplateBundle\Service\UserService
+                arguments: ["@doctrine.orm.entity_manager", "@cobase_app.repository.user", "@security.context"]
+
+    cproject_template.repository.user:
+                class:           Project\UserBundle\Entity\User
+                arguments:       [Project\UserBundle\Entity\User]
+                factory_service: doctrine.orm.entity_manager
+                factory_method:  getRepository
+
+    gedmo.listener.softdeleteable:
+        class: Gedmo\SoftDeleteable\SoftDeleteableListener
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
+        calls:
+            - [ setAnnotationReader, [ @annotation_reader ] ]

@@ -1,0 +1,5 @@
+ProjectTemplateBundle_home:
+    pattern:  /
+    defaults: { _controller: ProjectTemplateBundle:Index:index }
+    requirements:
+        _method:  GET

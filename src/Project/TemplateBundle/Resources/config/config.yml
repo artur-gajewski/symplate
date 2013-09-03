@@ -1,0 +1,4 @@
+parameters:
+
+    # Contact email address
+    project_template.emails.contact_email: info@youremail.com
