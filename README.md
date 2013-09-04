@@ -16,12 +16,6 @@ The purpose of Symplate is to offer you modern looking template to start you off
 - Google analtyics (antimattr/google-bundle)
 - Doctrine migrations
 
-#Requirements
-
-- PHP 5.3 or later
-- Symfony2
-- MySQL
-
 #Installation
 
 Clone this project to your drive:
