@@ -1,0 +1,37 @@
+/*
+==========================================
+    Site specific bootstrap overrides
+==========================================
+*/
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.jumbotron h1 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+h2.featurette-heading  {
+    margin-top: 0px;
+}
+
+@media (max-width: 767px) {
+    .container > .navbar-header, .container > .navbar-collapse {
+        min-width: 160px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:focus {
+        min-width: 160px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+        min-width: 160px;
+    }
+}
+
+/* When all columns are stacked on top of each other */
+@media (max-width: 767px) {
+}
+

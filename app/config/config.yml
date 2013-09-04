@@ -1,8 +1,7 @@
 imports:
     - { resource: parameters.yml }
-    - { resource: security.yml }
     - { resource: google.yml }
-    - { resource: @CobaseAppBundle/Resources/config/config.yml }
+    - { resource: @ProjectTemplateBundle/Resources/config/config.yml }
 
 framework:
     #esi:             ~
@@ -66,42 +65,11 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
 
-jms_security_extra:
-    secure_all_services: false
-
-fos_user:
-    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
-    firewall_name: main
-    user_class: Cobase\UserBundle\Entity\User
-
-    profile:
-        form:
-            type: cobase_user_profile
-
-    registration:
-            form:
-                type: cobase_user_registration
-            confirmation:
-                enabled: false
-
 # Gravatar Configuration
 ornicar_gravatar:
     rating: g
     size: 105
     default: mm
-
-# Captcha
-ewz_recaptcha:
-    public_key:   6LcpWN4SAAAAAOmSwDeV365jlf-OAf3hJ2IvWLoq
-    private_key:  6LcpWN4SAAAAANy1nu2Awuj1kEVLmbBbx1A6pItI
-    secure:       false
-    locale_key:   kernel.default_locale
-
-# Url converter
-liip_url_auto_converter:
-    linkclass:
-    target: _blank
-    debugmode: false
 
 eko_feed:
     feeds:

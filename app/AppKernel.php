@@ -17,17 +17,12 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
-            new Cobase\AppBundle\CobaseAppBundle(),
-            new Cobase\UserBundle\CobaseUserBundle(),
+            new Project\TemplateBundle\ProjectTemplateBundle(),
             new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
-            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
-            new Liip\UrlAutoConverterBundle\LiipUrlAutoConverterBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new AntiMattr\GoogleBundle\GoogleBundle(),
             new Aga\DateConverterBundle\DateConverterBundle(),
@@ -39,7 +34,6 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-            $bundles[] = new Cobase\DemoBundle\CobaseDemoBundle();
         }
 
         return $bundles;

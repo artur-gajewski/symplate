@@ -2,8 +2,5 @@ ProjectBundle:
     resource: "@ProjectTemplateBundle/Resources/config/routing.yml"
     prefix:   /
 
-_user_bundle:
-    resource: "@ProjectUserBundle/Resources/config/routing.yml"
-
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

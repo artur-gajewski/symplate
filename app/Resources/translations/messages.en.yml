@@ -1,12 +1,49 @@
-# Form field labels
-form:
-    realname: "Your real name:"
-    gravatar: "Gravatar email:"
-    
-security:
-    login:
-      username: "Username:"
-      password: "Password:"
-      remember_me: "Remember me"
-      submit: "Login"
-      
+#
+# Translations for the UI
+#
+
+### Layout ###
+
+navigation:
+    home: "Home"
+    about: "About"
+    contact: "Contact"
+    login: "Login"
+    logout: "Logout"
+    register: "Register"
+    profile: "Profile"
+
+hero:
+    slogan: "Catchy slogan goes here..."
+    content: "This is a template for a simple marketing or informational website. It includes a large callout called the hero unit, three supporting pieces of content and featurettes to catch the main information with images. Use this template as a starting point to create something more unique."
+
+footer:
+    copyright: "all rights reserved."
+
+### Front Page ###
+
+front:
+    heading1:
+        title: "Heading"
+        content: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui."
+        more: "View details"
+    heading2:
+        title: "Heading"
+        content: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui."
+        more: "View details"
+    heading3:
+        title: "Heading"
+        content: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui."
+        more: "View details"
+    featurette1:
+        title_first: "First featurette heading."
+        title_second: "Isn't this cool?"
+        content: "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
+    featurette2:
+        title_first: "Second one."
+        title_second: "It only gets better."
+        content: "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
+    featurette3:
+        title_first: "And lastly, this one."
+        title_second: "Did you like it?"
+        content: "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."

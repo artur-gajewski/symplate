@@ -1,0 +1,62 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>{{ 'front.heading1.title'|trans }}</h2>
+            <p>{{ 'front.heading1.content'|trans }}</p>
+            <p><a class="btn btn-default" href="#">{{ 'front.heading1.more'|trans }} &raquo;</a></p>
+        </div>
+        <div class="col-sm-4">
+            <h2>{{ 'front.heading2.title'|trans }}</h2>
+            <p>{{ 'front.heading2.content'|trans }}</p>
+            <p><a class="btn btn-default" href="#">{{ 'front.heading2.more'|trans }} &raquo;</a></p>
+        </div>
+        <div class="col-sm-4">
+            <h2>{{ 'front.heading3.title'|trans }}</h2>
+            <p>{{ 'front.heading3.content'|trans }}</p>
+            <p><a class="btn btn-default" href="#">{{ 'front.heading3.more'|trans }} &raquo;</a></p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-sm-9">
+            <h2 class="featurette-heading">{{ 'front.featurette1.title_first'|trans }} <span class="text-muted">{{ 'front.featurette1.title_second'|trans }}</span></h2>
+            <p class="lead">{{ 'front.featurette1.content'|trans }}</p>
+        </div>
+        <div class="col-sm-3">
+            <img class="featurette-image img-responsive" data-src="{{ asset('js/holder.js/300x200/auto') }}" alt="Placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-sm-9">
+            <h2 class="featurette-heading">{{ 'front.featurette2.title_first'|trans }} <span class="text-muted">{{ 'front.featurette2.title_second'|trans }}</span></h2>
+            <p class="lead">{{ 'front.featurette2.content'|trans }}</p>
+        </div>
+        <div class="col-sm-3">
+            <img class="featurette-image img-responsive" data-src="{{ asset('js/holder.js/300x200/auto') }}" alt="Placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-sm-9">
+            <h2 class="featurette-heading">{{ 'front.featurette3.title_first'|trans }} <span class="text-muted">{{ 'front.featurette3.title_second'|trans }}</span></h2>
+            <p class="lead">{{ 'front.featurette3.content'|trans }}</p>
+        </div>
+        <div class="col-sm-3">
+            <img class="featurette-image img-responsive" data-src="{{ asset('js/holder.js/300x200/auto') }}" alt="Placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+{% endblock content %}
+

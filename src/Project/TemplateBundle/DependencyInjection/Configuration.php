@@ -1,6 +1,6 @@
 <?php
 
-namespace Cobase\AppBundle\DependencyInjection;
+namespace Project\TemplateBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('cobase_app');
+        $rootNode = $treeBuilder->root('project_template');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

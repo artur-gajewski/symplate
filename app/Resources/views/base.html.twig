@@ -39,20 +39,17 @@
                 </div>
                 <div class="navbar-collapse collapse pull-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="active"><a href="#">{{ 'navigation.home'|trans }}</a></li>
+                        <li><a href="#about">{{ 'navigation.about'|trans }}</a></li>
+                        <li><a href="#contact">{{ 'navigation.contact'|trans }}</a></li>
                         <li class="dropdown pull-right">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">User CP <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                                    <li><a href="{{ path('fos_user_profile_edit') }}">Profile</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
-                                {% else %}
-                                    <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
-                                    <li><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
-                                {% endif %}
+                                <li><a href="#">{{ 'navigation.profile'|trans }}</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">{{ 'navigation.login'|trans }}</a></li>
+                                <li><a href="#">{{ 'navigation.logout'|trans }}</a></li>
+                                <li><a href="#">{{ 'navigation.register'|trans }}</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,15 +60,15 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
-                <h1>Catchy slogan goes here...</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit, three supporting pieces of content and featurettes to catch the main information with images. Use this template as a starting point to create something more unique.</p>
+                <h1>{{ 'hero.slogan'|trans }}</h1>
+                <p>{{ 'hero.content'|trans }}</p>
             </div>
         </div>
 
         <div class="container">
             {% block content %}{% endblock %}
             <footer>
-                <p>&copy; {{ "now"|date("Y") }}, all rights reserved.</p>
+                <p>&copy; {{ "now"|date("Y") }}, {{ 'footer.copyright'|trans }}</p>
             </footer>
         </div> <!-- /container -->
 

@@ -31,6 +31,6 @@ class ProjectTemplateExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'Cobase_app_extension';
+        return 'Project_template_extension';
     }
 }
