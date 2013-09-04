@@ -16,6 +16,10 @@ The purpose of Symplate is to offer you modern looking template to start you off
 - Google analtyics (antimattr/google-bundle)
 - Doctrine migrations
 
+#Working demo
+
+Have a look at the template provided with this package: http://arturgajewski.com/symplate
+
 #Installation
 
 Clone this project to your drive:
