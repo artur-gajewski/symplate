@@ -17,7 +17,7 @@ The purpose of Symplate is to offer you modern looking template to start you off
 - Doctrine migrations
 - FOSUserBundle (incomplete, WIP)
 
-#Working demo
+#Check out the layout!
 
 Have a look at the template provided with this package: http://arturgajewski.com/symplate
 
