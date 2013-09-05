@@ -39,17 +39,20 @@
                 </div>
                 <div class="navbar-collapse collapse pull-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">{{ 'navigation.home'|trans }}</a></li>
+                        <li><a href="{{ path('ProjectTemplateBundle_home') }}">{{ 'navigation.home'|trans }}</a></li>
                         <li><a href="#about">{{ 'navigation.about'|trans }}</a></li>
                         <li><a href="#contact">{{ 'navigation.contact'|trans }}</a></li>
                         <li class="dropdown pull-right">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">User CP <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">{{ 'navigation.profile'|trans }}</a></li>
+                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                <li><a href="{{ path('fos_user_profile_edit') }}">{{ 'navigation.profile'|trans }}</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">{{ 'navigation.login'|trans }}</a></li>
-                                <li><a href="#">{{ 'navigation.logout'|trans }}</a></li>
-                                <li><a href="#">{{ 'navigation.register'|trans }}</a></li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">{{ 'navigation.logout'|trans }}</a></li>
+                            {% else %}
+                                <li><a href="{{ path('fos_user_security_login') }}">{{ 'navigation.login'|trans }}</a></li>
+                                <li><a href="{{ path('fos_user_registration_register') }}">{{ 'navigation.register'|trans }}</a></li>
+                            {% endif %}
                             </ul>
                         </li>
                     </ul>

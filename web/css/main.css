@@ -119,6 +119,20 @@ label {
     margin-bottom: 5px;
 }
 
+div.form-errors {
+    margin-left: 180px;
+    color: #b94a48;
+}
+
+div.form-error ul {
+    list-style: none;
+}
+
+div.form-error ul > li {
+    margin-left: 140px;
+    color: #b94a48;
+}
+
 .text-error {
     color: #b94a48;
 }

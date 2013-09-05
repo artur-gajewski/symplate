@@ -1,7 +1,5 @@
 {% extends "ProjectUserBundle::layout.html.twig" %}
 
-{% trans_default_domain 'FOSUserBundle' %}
-
 {% block fos_user_content %}
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
     {% if app.session is not empty %}

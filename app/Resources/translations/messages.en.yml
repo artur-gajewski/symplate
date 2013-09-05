@@ -60,3 +60,16 @@ front:
         title_first: "And lastly, this one."
         title_second: "Did you like it?"
         content: "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
+
+### Forms ###
+
+form:
+    register:
+        title: "User Registration"
+    button:
+        register: "Register"
+        login: "Login"
+    password_again: "Password again:"
+
+registration:
+    confirmed: Congratulations %username%, your account is now activated. You can now login with your new account information.
