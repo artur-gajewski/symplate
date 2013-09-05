@@ -5,8 +5,8 @@ Have you ever noticed how repeatative starting a new Symfony2 project is? You al
 
 The purpose of Symplate is to offer you modern looking template to start you off with:
 
-- fully responsive layout (bootstrap)
-- multi-lingual interface
+- Fully responsive layout (bootstrap)
+- Translations
 - RSS feed capability (eko/feedbundle)
 - Gravatar implementation (ornicar/gravatar-bundle)
 - Pagination (knplabs/knp-paginator-bundle)
@@ -15,6 +15,7 @@ The purpose of Symplate is to offer you modern looking template to start you off
 - Date converting filters (artur-gajewski/date-converter-bundle)
 - Google analtyics (antimattr/google-bundle)
 - Doctrine migrations
+- FOSUserBundle (incomplete, WIP)
 
 #Working demo
 
