@@ -3,10 +3,3 @@ services:
         class: Project\TemplateBundle\Twig\Extensions\ProjectTemplateExtension
         tags:
             - { name: twig.extension }
-
-    gedmo.listener.softdeleteable:
-        class: Gedmo\SoftDeleteable\SoftDeleteableListener
-        tags:
-            - { name: doctrine.event_subscriber, connection: default }
-        calls:
-            - [ setAnnotationReader, [ @annotation_reader ] ]

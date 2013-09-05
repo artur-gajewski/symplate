@@ -34,6 +34,8 @@
         "ornicar/gravatar-bundle": "dev-master",
         "xi/fixtures": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "~1.1",
+        "jms/security-extra-bundle": "1.5.*",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
         "antimattr/google-bundle": "dev-master",
         "artur-gajewski/date-converter-bundle": "1.0.*@dev",
         "gedmo/doctrine-extensions": "dev-wip-v2.4.0",

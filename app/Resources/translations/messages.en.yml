@@ -18,6 +18,19 @@ hero:
     content: "This is a template for a simple marketing or informational website. It includes a large callout called the hero unit, three supporting pieces of content and featurettes to catch the main information with images. Use this template as a starting point to create something more unique."
 
 footer:
+    navigate:
+        title: "Navigate"
+        home: "Home"
+        about: "About"
+        contact: "Contact"
+    tell_your_friends:
+        title: "Tell your friends"
+        sub: "Share this page with the following:"
+    contact_us:
+        title: "Contact us"
+        address: "Address"
+        email: "Email"
+        phone: "Phone"
     copyright: "all rights reserved."
 
 ### Front Page ###

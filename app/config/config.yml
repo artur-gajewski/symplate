@@ -1,5 +1,6 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: security.yml }
     - { resource: google.yml }
     - { resource: @ProjectTemplateBundle/Resources/config/config.yml }
 
@@ -51,10 +52,6 @@ doctrine:
         charset:  UTF8
 
     orm:
-        filters:
-            softdeleteable:
-                class: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
-                enabled: true
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
 
@@ -71,6 +68,7 @@ ornicar_gravatar:
     size: 105
     default: mm
 
+# RSS Feed Configuration
 eko_feed:
     feeds:
         post:
@@ -78,3 +76,9 @@ eko_feed:
             description: 'Latest posts'
             link: 'cobase.featurice.com'
             encoding: 'utf-8'
+
+# FOSUserBundle Configuration
+fos_user:
+    db_driver: orm #other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Project\UserBundle\Entity\User

@@ -58,19 +58,54 @@
         </div>
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
+        {% block jumbotron %}
         <div class="jumbotron">
             <div class="container">
                 <h1>{{ 'hero.slogan'|trans }}</h1>
                 <p>{{ 'hero.content'|trans }}</p>
             </div>
         </div>
+        {% endblock %}
 
         <div class="container">
             {% block content %}{% endblock %}
-            <footer>
-                <p>&copy; {{ "now"|date("Y") }}, {{ 'footer.copyright'|trans }}</p>
-            </footer>
         </div> <!-- /container -->
+
+        <footer class="full-width">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 footer-column">
+                        <h3>{{ 'footer.navigate.title'|trans }}</h3>
+                        <p><a href="#">{{ 'footer.navigate.home'|trans }}</a></p>
+                        <p><a href="#">{{ 'footer.navigate.about'|trans }}</a></p>
+                        <p><a href="#">{{ 'footer.navigate.contact'|trans }}</a></p>
+                    </div>
+                    <div class="col-sm-4 footer-column">
+                        <h3>{{ 'footer.tell_your_friends.title'|trans }}</h3>
+                        <p>{{ 'footer.tell_your_friends.sub'|trans }}</p>
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="{{ app.request.uriForPath() }}">
+                            <a class="addthis_button_facebook"></a>
+                            <a class="addthis_button_twitter"></a>
+                            <a class="addthis_button_linkedin"></a>
+                            <a class="addthis_button_email"></a>
+                            <a class="addthis_button_stumbleupon"></a>
+                        </div>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=s"></script>
+                        <!-- AddThis Button END -->
+                    </div>
+                    <div class="col-sm-4 footer-column">
+                        <h3>{{ 'footer.contact_us.title'|trans }}</h3>
+                        <address>
+                            <strong>Company Inc.</strong><br>
+                            123 Symfony Ave, Suite 123<br>
+                            Helsinki 00100, Finland<br>
+                            {{ 'footer.contact_us.phone'|trans }}: (123) 123-4321
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>

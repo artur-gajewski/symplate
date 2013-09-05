@@ -4,3 +4,6 @@ ProjectBundle:
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+_user_bundle:
+    resource: "@ProjectUserBundle/Resources/config/routing.yml"

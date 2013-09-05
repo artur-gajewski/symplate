@@ -22,8 +22,10 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
 
             new Project\TemplateBundle\ProjectTemplateBundle(),
+            new Project\UserBundle\ProjectUserBundle(),
             new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new AntiMattr\GoogleBundle\GoogleBundle(),
             new Aga\DateConverterBundle\DateConverterBundle(),
             new Eko\FeedBundle\EkoFeedBundle(),
