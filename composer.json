@@ -8,8 +8,8 @@
     "minimum-stability": "dev",
     "authors": [
         {
-            "name": "Artur Gajewski",
-            "homepage": "https://github.com/artur-gajewski"
+            "name": "Kalle Lamminpää",
+            "homepage": "https://github.com/lamminpaa"
         }
     ],
     "autoload": {
