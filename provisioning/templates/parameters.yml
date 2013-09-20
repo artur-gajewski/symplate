@@ -1,0 +1,36 @@
+parameters:
+    
+    # Title of the site
+    # This will be as windows title as well as the title logo text
+    site_title: {{app_name}}
+
+    # Should the registration be enabled?
+    # If this setting is set to false, user's can be created
+    # through the use of app/console
+    allow_registration: true
+
+    # Should Google Analytics be enabled?
+    enable_google_analytics: false
+
+    #Should user login be required?
+    login_required: false
+    
+    # Database configurations
+    database_driver:   pdo_mysql
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     {{database_name}}
+    database_user:     root
+    database_password:
+
+    # Mail server settings
+    mailer_transport:  smtp
+    mailer_host:       localhost
+    mailer_user:       ~
+    mailer_password:   ~
+
+    # Locale of the application
+    locale:  en
+    
+    # Secret for the passwords
+    secret: this_is_not_the_secret_modify_this
