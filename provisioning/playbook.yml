@@ -1,0 +1,91 @@
+---
+
+- hosts: webservers
+  user: vagrant
+  sudo: True
+
+  vars:
+    app_name: symplate
+    webapps_dir: /var/www
+    log_dir:  /var/log
+    database_name: symplate
+
+  tasks:
+    - name: update apt
+      action: command /usr/bin/apt-get update
+
+    - name: install python-software-properties
+      action: apt pkg=python-software-properties state=present
+
+    - name: install mariadb key
+      action: command apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+
+    - name: install mariadb repository
+      action: command add-apt-repository 'deb http://mirror.netinch.com/pub/mariadb/repo/10.0/ubuntu precise main'
+
+    - name: update apt
+      action: command /usr/bin/apt-get update
+
+
+
+    - name: add nginx ppa
+      action: apt_repository repo=ppa:nginx/stable state=present
+
+
+
+    - name: install web server packages
+      action: apt pkg=$item state=installed
+      with_items:
+        - build-essential
+        - mariadb-server
+        - php5-cli
+        - php5-fpm
+        - php5-mysql
+        - php5-mcrypt
+        - php5-gd
+        - php5-curl
+        - php-apc
+        - git
+        - nginx
+        - curl
+        - vim
+        - python-mysqldb
+        - ant
+        - openjdk-7-jdk
+
+    - name: remove default nginx site
+      action: file path=/etc/nginx/sites-enabled/default state=absent
+
+    - name: write nginx.conf
+      action: template src=templates/nginx.conf dest=/etc/nginx/nginx.conf
+
+    - name: create webapps directory
+      action: file dest=/srv/webapps state=directory
+
+    - name: create nginx site config
+      action: template src=templates/nginx_site_symfony2.conf dest=/etc/nginx/sites-available/${app_name}.conf
+      notify:
+        - restart nginx
+
+    - name: link nginx config
+      action: file src=/etc/nginx/sites-available/${app_name}.conf dest=/etc/nginx/sites-enabled/${app_name}.conf state=link
+      notify:
+        - restart nginx
+    - name: Start the MariaDB service
+      action: service name=mysql state=started
+
+    - name: create site config
+      action: template src=templates/parameters.yml dest=/vagrant/app/config/parameters.yml
+
+    - mysql_db: db={{database_name}} state=present
+    - name: build
+      action: shell cd /vagrant; ant prepare
+
+    - name: restart php5-fpm
+      command: /etc/init.d/php5-fpm restart
+
+  handlers:
+
+    - name: restart nginx
+      action: service name=nginx state=restarted
+

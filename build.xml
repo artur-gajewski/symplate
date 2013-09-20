@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="symplate" default="phpunit" basedir=".">
+    <property environment="env"/>
+    <target name="prepare" depends="vendors" description="Prepares tests">
+    </target>
+    <target name="vendors" description="Install dependencies">
+        <exec executable="wget" failonerror="true">
+            <arg value="-nc" />
+            <arg value="http://getcomposer.org/composer.phar" />
+        </exec>
+
+        <exec executable="php" failonerror="true">
+            <arg value="composer.phar" />
+            <arg value="install" />
+        </exec>
+        <exec executable="php" failonerror="true">
+            <arg value="app/console" />
+            <arg value="assetic:dump" />
+        </exec>
+        <exec executable="php" failonerror="true">
+            <arg value="app/console" />
+            <arg value="fos:js-routing:dump" />
+        </exec>
+        <exec executable="php" failonerror="false">
+            <arg value="app/console" />
+            <arg value="doctrine:schema:create" />
+        </exec>
+        <exec executable="php" failonerror="false">
+            <arg value="app/console" />
+            <arg value="doctrine:migrations:migrate --no-interaction" />
+        </exec>
+
+
+    </target>
+</project>

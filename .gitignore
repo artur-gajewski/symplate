@@ -20,3 +20,5 @@ app/logs/*
 app/config/parameters.yml
 /bin
 web/stylesheets/app_app_1.css
+
+web/js/fos_js_routes.js
