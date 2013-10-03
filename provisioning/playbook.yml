@@ -71,11 +71,15 @@
       action: file src=/etc/nginx/sites-available/${app_name}.conf dest=/etc/nginx/sites-enabled/${app_name}.conf state=link
       notify:
         - restart nginx
+
     - name: Start the MariaDB service
       action: service name=mysql state=started
 
     - name: create site config
       action: template src=templates/parameters.yml dest=/vagrant/app/config/parameters.yml
+
+    - name: Set java link
+      action: command update-alternatives --set java /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
 
     - mysql_db: db={{database_name}} state=present
     - name: build
